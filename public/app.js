@@ -778,7 +778,7 @@ function renderStudioModal() {
           color: '#6ec6ff',
           enabled: true,
           provider: 'huggingface',
-          model: 'Qwen/Qwen2.5-7B-Instruct:fastest',
+          model: 'Qwen/Qwen3-4B-Instruct-2507:fastest',
           age: 29,
           bio: '',
           traits: ['curious', 'warm', 'observant'],

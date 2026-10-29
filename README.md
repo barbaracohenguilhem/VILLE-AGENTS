@@ -37,7 +37,7 @@ completions, and blocked attempts are counted separately for the current server 
 
 | Provider (in `house.json`) | Key / env var | Default model |
 |---|---|---|
-| `huggingface` | `HF_TOKEN` (optional `HF_BASE_URL`) | `Qwen/Qwen2.5-7B-Instruct:fastest` |
+| `huggingface` | `HF_TOKEN` (optional `HF_BASE_URL`) | `Qwen/Qwen3-4B-Instruct-2507:fastest` |
 | `openai` | `OPENAI_API_KEY` (optional `OPENAI_BASE_URL`) | `gpt-6-luna` |
 | `anthropic` | `ANTHROPIC_API_KEY` (optional `ANTHROPIC_BASE_URL`) | `claude-haiku-5-5` |
 | `openai-compatible` | `OPENAI_COMPAT_BASE_URL` + `OPENAI_COMPAT_API_KEY` | `llama3.2` |
@@ -79,7 +79,7 @@ Everything about the house lives in one file. Restart after editing
   "emoji": "🔭",
   "color": "#f5a623",
   "provider": "huggingface",         // huggingface | openai | anthropic | openai-compatible | offline
-  "model": "Qwen/Qwen2.5-7B-Instruct:fastest",  // optional; provider default otherwise
+  "model": "Qwen/Qwen3-4B-Instruct-2507:fastest",  // optional; provider default otherwise
   "params": { "reasoning_effort": "low" },   // optional; merged into the API request
   "age": 31,
   "bio": "An astrophysicist who left academia to write about science…",

@@ -11,7 +11,7 @@ export type { CompleteRequest, LLMClient, OfflineMeta, ProviderMode, ProviderSta
 export { LLMError, ProviderUnavailableError } from './types.ts';
 
 export const HF_ROUTER_URL = 'https://router.huggingface.co/v1';
-export const HF_DEFAULT_MODEL = 'Qwen/Qwen2.5-7B-Instruct:fastest';
+export const HF_DEFAULT_MODEL = 'Qwen/Qwen3-4B-Instruct-2507:fastest';
 
 const DEFAULT_MODEL: Record<string, string> = {
   openai: 'gpt-6-luna',
