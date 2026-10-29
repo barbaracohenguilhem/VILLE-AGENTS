@@ -1,0 +1,21 @@
+{
+  "name": "ville",
+  "version": "0.1.0",
+  "description": "A shared house where several LLM-powered agents live together, talk, build relationships and remember. Watch them in your browser — or drop by for a chat.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "dev": "node --watch-path=./src --watch-path=./config src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "reset": "node scripts/reset.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

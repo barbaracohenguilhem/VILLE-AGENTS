@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ville</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏡%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🏡</span>
+      <div>
+        <div class="title">Ville</div>
+        <div class="subtitle" id="house-name">…</div>
+      </div>
+    </div>
+
+    <div class="clock" title="Simulated time">
+      <span class="clock-icon" id="clock-icon">☀️</span>
+      <div>
+        <div class="clock-time" id="clock-time">--:--</div>
+        <div class="clock-day" id="clock-day">Day –</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="btn-play" title="Pause / resume time">⏸</button>
+      <button class="btn" id="btn-step" title="Advance one tick (when paused)">⏭</button>
+      <select class="select" id="speed" title="Speed">
+        <option value="0.5">0.5×</option>
+        <option value="1" selected>1×</option>
+        <option value="2">2×</option>
+        <option value="4">4×</option>
+      </select>
+      <label class="toggle" title="Show residents' private thoughts">
+        <input type="checkbox" id="show-thoughts" /> <span>thoughts</span>
+      </label>
+      <button class="btn" id="btn-sound" title="Toggle cozy sound effects">🔇</button>
+      <button class="btn" id="btn-rels" title="Open house relationship web">🕸️ Relations</button>
+      <button class="btn" id="btn-studio" title="Edit residents, rooms &amp; furniture">🛠️ Studio</button>
+      <button class="btn stats" id="llm-stats" title="Model connections and activity this session">System · —</button>
+      <div class="conn" id="conn" title="Connection to the house">●</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="house-wrap" id="house-wrap">
+      <button class="system-notice" id="system-notice" hidden></button>
+      <div class="map" id="map">
+        <canvas id="canvas"></canvas>
+        <div class="overlay" id="overlay"></div>
+      </div>
+      <div class="hint" id="hint">Click anywhere on the floor to walk there · click a person to read their mind</div>
+    </section>
+
+    <aside class="feed-wrap">
+      <div class="feed-head">
+        <span>Life in the house</span>
+        <div class="filters">
+          <label><input type="checkbox" data-filter="say" checked /> talk</label>
+          <label><input type="checkbox" data-filter="action" checked /> actions</label>
+          <label><input type="checkbox" data-filter="system" checked /> house</label>
+        </div>
+      </div>
+      <ol class="feed" id="feed"></ol>
+    </aside>
+  </main>
+
+  <footer class="visitor">
+    <div class="you">
+      <span class="you-emoji" id="human-emoji">🙂</span>
+      <input class="input name" id="human-name" placeholder="Your name" maxlength="24" title="What the residents call you" />
+      <span class="muted">in the</span>
+      <select class="select" id="human-room" title="Walk to another room"></select>
+    </div>
+    <form class="say" id="say-form">
+      <select class="select" id="human-to" title="Who you're talking to">
+        <option value="everyone">everyone here</option>
+      </select>
+      <input class="input" id="human-text" placeholder="Say something to the people in this room…" maxlength="600" autocomplete="off" />
+      <button class="btn primary" type="submit" id="btn-send">Say</button>
+    </form>
+  </footer>
+
+  <aside class="drawer" id="drawer" hidden>
+    <button class="drawer-close" id="drawer-close" title="Close">✕</button>
+    <div class="drawer-body" id="drawer-body"></div>
+  </aside>
+
+  <div class="modal-backdrop" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 id="modal-title">House</h3>
+        <button class="drawer-close" id="modal-close" title="Close">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,777 @@
+{
+  "name": "Number 9, Rue de Ville",
+  "description": "A tall, slightly crooked townhouse with creaky floors, too many plants, and a kitchen that everyone ends up in. The residents found each other through a flat-share ad and have been living together for a few weeks.",
+  "startHour": 8,
+  "tick": {
+    "realSeconds": 20,
+    "simMinutes": 15,
+    "concurrentThinkers": 3,
+    "conversationMaxTurns": 6
+  },
+  "movement": {
+    "tileMs": 260,
+    "wanderChance": 0.06
+  },
+  "memory": {
+    "retrieveTop": 8,
+    "reflectionThreshold": 70,
+    "maxMemories": 400
+  },
+  "human": {
+    "name": "Visitor",
+    "emoji": "🙂",
+    "color": "#ffd166",
+    "startRoom": "living"
+  },
+  "rooms": [
+    {
+      "id": "garden",
+      "name": "Garden",
+      "emoji": "🌿",
+      "color": "#4f8a3f",
+      "floor": "grass",
+      "outdoor": true,
+      "description": "a small walled garden with raised beds, a wobbly bench and a lemon tree that refuses to fruit",
+      "x": 1,
+      "y": 1,
+      "w": 12,
+      "h": 10,
+      "objects": [
+        {
+          "name": "lemon tree",
+          "kind": "tree",
+          "x": 1,
+          "y": 0
+        },
+        {
+          "name": "raised vegetable beds",
+          "kind": "planter",
+          "x": 1,
+          "y": 4,
+          "w": 3
+        },
+        {
+          "name": "raised vegetable beds",
+          "kind": "planter",
+          "x": 1,
+          "y": 6,
+          "w": 3
+        },
+        {
+          "name": "wobbly bench",
+          "kind": "bench",
+          "x": 7,
+          "y": 3
+        },
+        {
+          "name": "watering can",
+          "kind": "can",
+          "x": 5,
+          "y": 8
+        },
+        {
+          "name": "compost bin",
+          "kind": "bin",
+          "x": 11,
+          "y": 9
+        },
+        {
+          "name": "string of lights",
+          "kind": "lights",
+          "x": 5,
+          "y": 0,
+          "w": 6
+        },
+        {
+          "name": "flowers",
+          "kind": "flowers",
+          "x": 9,
+          "y": 7
+        },
+        {
+          "name": "flowers",
+          "kind": "flowers",
+          "x": 10,
+          "y": 8
+        },
+        {
+          "name": "flowers",
+          "kind": "flowers",
+          "x": 0,
+          "y": 9
+        },
+        {
+          "name": "stepping stones",
+          "kind": "stones",
+          "x": 11,
+          "y": 4
+        },
+        {
+          "name": "stepping stones",
+          "kind": "stones",
+          "x": 10,
+          "y": 5
+        },
+        {
+          "name": "stepping stones",
+          "kind": "stones",
+          "x": 9,
+          "y": 6
+        }
+      ]
+    },
+    {
+      "id": "living",
+      "name": "Living Room",
+      "emoji": "🛋️",
+      "color": "#8a5a36",
+      "floor": "wood",
+      "description": "the big shared room: a sagging green sofa, a record player, board games stacked under the window",
+      "x": 14,
+      "y": 1,
+      "w": 13,
+      "h": 10,
+      "objects": [
+        {
+          "name": "fireplace",
+          "kind": "fireplace",
+          "x": 1,
+          "y": 0
+        },
+        {
+          "name": "record player and records",
+          "kind": "records",
+          "x": 8,
+          "y": 0
+        },
+        {
+          "name": "house noticeboard",
+          "kind": "board",
+          "x": 11,
+          "y": 0
+        },
+        {
+          "name": "rug",
+          "kind": "rug",
+          "x": 3,
+          "y": 2,
+          "w": 6,
+          "h": 5
+        },
+        {
+          "name": "green sofa",
+          "kind": "sofa",
+          "x": 4,
+          "y": 3
+        },
+        {
+          "name": "coffee table",
+          "kind": "coffeetable",
+          "x": 4,
+          "y": 5,
+          "w": 3
+        },
+        {
+          "name": "armchair",
+          "kind": "armchair",
+          "x": 8,
+          "y": 4,
+          "facing": "left"
+        },
+        {
+          "name": "old TV",
+          "kind": "tv",
+          "x": 4,
+          "y": 8,
+          "facing": "up"
+        },
+        {
+          "name": "board games",
+          "kind": "games",
+          "x": 12,
+          "y": 9
+        },
+        {
+          "name": "plant",
+          "kind": "plant",
+          "x": 0,
+          "y": 9
+        },
+        {
+          "name": "plant",
+          "kind": "plant",
+          "x": 12,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "emoji": "📚",
+      "color": "#3b4a7a",
+      "floor": "carpet",
+      "description": "a quiet, book-lined study with a chess table by the window and a desk with a dusty desktop computer",
+      "x": 28,
+      "y": 1,
+      "w": 11,
+      "h": 10,
+      "objects": [
+        {
+          "name": "floor-to-ceiling bookshelves",
+          "kind": "shelf",
+          "x": 0,
+          "y": 0,
+          "w": 5
+        },
+        {
+          "name": "floor-to-ceiling bookshelves",
+          "kind": "shelf",
+          "x": 6,
+          "y": 0,
+          "w": 5
+        },
+        {
+          "name": "bookshelf",
+          "kind": "shelf",
+          "x": 10,
+          "y": 3,
+          "w": 1,
+          "h": 4
+        },
+        {
+          "name": "rug",
+          "kind": "rug",
+          "x": 1,
+          "y": 4,
+          "w": 3,
+          "h": 3
+        },
+        {
+          "name": "chess table",
+          "kind": "chess",
+          "x": 2,
+          "y": 5
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 1,
+          "y": 5,
+          "facing": "right"
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 3,
+          "y": 5,
+          "facing": "left"
+        },
+        {
+          "name": "desk with a computer",
+          "kind": "deskpc",
+          "x": 6,
+          "y": 3
+        },
+        {
+          "name": "reading chair",
+          "kind": "armchair",
+          "x": 8,
+          "y": 8,
+          "facing": "left"
+        },
+        {
+          "name": "reading lamp",
+          "kind": "lamp",
+          "x": 9,
+          "y": 8
+        },
+        {
+          "name": "globe",
+          "kind": "globe",
+          "x": 0,
+          "y": 9
+        },
+        {
+          "name": "crossword books",
+          "kind": "books",
+          "x": 4,
+          "y": 9
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen",
+      "emoji": "🍳",
+      "color": "#c2b091",
+      "floor": "tile",
+      "description": "the warm heart of the house: a long wooden table, a temperamental coffee machine and a leaky tap",
+      "x": 1,
+      "y": 12,
+      "w": 12,
+      "h": 10,
+      "objects": [
+        {
+          "name": "counter",
+          "kind": "counter",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "counter",
+          "kind": "counter",
+          "x": 1,
+          "y": 0
+        },
+        {
+          "name": "coffee machine",
+          "kind": "counter-coffee",
+          "x": 2,
+          "y": 0
+        },
+        {
+          "name": "fruit bowl",
+          "kind": "counter-bowl",
+          "x": 3,
+          "y": 0
+        },
+        {
+          "name": "stove",
+          "kind": "stove",
+          "x": 4,
+          "y": 0
+        },
+        {
+          "name": "leaky tap",
+          "kind": "sink",
+          "x": 8,
+          "y": 0
+        },
+        {
+          "name": "counter",
+          "kind": "counter",
+          "x": 9,
+          "y": 0
+        },
+        {
+          "name": "radio",
+          "kind": "counter-radio",
+          "x": 10,
+          "y": 0
+        },
+        {
+          "name": "fridge covered in notes",
+          "kind": "fridge",
+          "x": 11,
+          "y": 0
+        },
+        {
+          "name": "long wooden table",
+          "kind": "table",
+          "x": 3,
+          "y": 4,
+          "w": 5,
+          "h": 2
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 3,
+          "y": 3
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 5,
+          "y": 3
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 7,
+          "y": 3
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 3,
+          "y": 6,
+          "facing": "up"
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 5,
+          "y": 6,
+          "facing": "up"
+        },
+        {
+          "name": "chair",
+          "kind": "chair",
+          "x": 7,
+          "y": 6,
+          "facing": "up"
+        },
+        {
+          "name": "plant",
+          "kind": "plant",
+          "x": 11,
+          "y": 9
+        }
+      ]
+    },
+    {
+      "id": "studio",
+      "name": "Studio",
+      "emoji": "🎨",
+      "color": "#6f6a78",
+      "floor": "concrete",
+      "description": "a paint-splattered room with an easel, a keyboard, a beaten-up guitar and a gaming PC in the corner",
+      "x": 14,
+      "y": 12,
+      "w": 13,
+      "h": 10,
+      "objects": [
+        {
+          "name": "stacked canvases",
+          "kind": "canvases",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "speaker",
+          "kind": "speaker",
+          "x": 8,
+          "y": 0
+        },
+        {
+          "name": "electric keyboard",
+          "kind": "keyboard",
+          "x": 9,
+          "y": 0
+        },
+        {
+          "name": "speaker",
+          "kind": "speaker",
+          "x": 12,
+          "y": 0
+        },
+        {
+          "name": "acoustic guitar",
+          "kind": "guitar",
+          "x": 12,
+          "y": 2
+        },
+        {
+          "name": "easel and canvas",
+          "kind": "easel",
+          "x": 2,
+          "y": 3
+        },
+        {
+          "name": "paint splatters",
+          "kind": "splat",
+          "x": 4,
+          "y": 4
+        },
+        {
+          "name": "paint splatters",
+          "kind": "splat",
+          "x": 8,
+          "y": 6
+        },
+        {
+          "name": "paint splatters",
+          "kind": "splat",
+          "x": 1,
+          "y": 7
+        },
+        {
+          "name": "beanbag",
+          "kind": "beanbag",
+          "x": 3,
+          "y": 7
+        },
+        {
+          "name": "gaming PC",
+          "kind": "deskpc",
+          "x": 10,
+          "y": 7
+        },
+        {
+          "name": "gaming chair",
+          "kind": "chair",
+          "x": 10,
+          "y": 8,
+          "facing": "up"
+        }
+      ]
+    },
+    {
+      "id": "bedrooms",
+      "name": "Bedrooms",
+      "emoji": "🛏️",
+      "color": "#4a7a78",
+      "floor": "carpet",
+      "description": "the upstairs landing and everyone's bedrooms; people come here to sleep or to be alone",
+      "x": 28,
+      "y": 12,
+      "w": 11,
+      "h": 10,
+      "objects": [
+        {
+          "name": "Nova's bed",
+          "kind": "bed",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Milo's bed",
+          "kind": "bed",
+          "x": 2,
+          "y": 0
+        },
+        {
+          "name": "Theo's bed",
+          "kind": "bed",
+          "x": 4,
+          "y": 0
+        },
+        {
+          "name": "Juniper's bed",
+          "kind": "bed",
+          "x": 8,
+          "y": 0
+        },
+        {
+          "name": "Rafa's bed",
+          "kind": "bed",
+          "x": 10,
+          "y": 0
+        },
+        {
+          "name": "spare bed",
+          "kind": "bed",
+          "x": 0,
+          "y": 8
+        },
+        {
+          "name": "rug",
+          "kind": "rug",
+          "x": 2,
+          "y": 4,
+          "w": 6,
+          "h": 3
+        },
+        {
+          "name": "landing window seat",
+          "kind": "bench",
+          "x": 8,
+          "y": 8,
+          "facing": "up"
+        },
+        {
+          "name": "laundry basket",
+          "kind": "basket",
+          "x": 2,
+          "y": 9
+        },
+        {
+          "name": "hallway mirror",
+          "kind": "mirror",
+          "x": 5,
+          "y": 9,
+          "facing": "up"
+        },
+        {
+          "name": "Nova's telescope",
+          "kind": "telescope",
+          "x": 10,
+          "y": 4
+        }
+      ]
+    }
+  ],
+  "residents": [
+    {
+      "name": "Nova",
+      "emoji": "🔭",
+      "color": "#f5a623",
+      "provider": "huggingface",
+      "model": "Qwen/Qwen2.5-7B-Instruct:fastest",
+      "age": 31,
+      "bio": "An astrophysicist who left academia to write about science for normal people. Talks fast, thinks faster, forgets to eat. Owns a telescope she has set up exactly once. Secretly worried she made the wrong career choice.",
+      "traits": [
+        "curious",
+        "talkative",
+        "warm",
+        "scatterbrained",
+        "allergic to small talk",
+        "competitive at board games"
+      ],
+      "style": "Quick, enthusiastic, full of tangents and 'okay but here's the thing'. Swears mildly when excited.",
+      "goals": [
+        "finish a long article about dark matter that is already two weeks late",
+        "convince the house to do a stargazing night in the garden",
+        "learn to cook one proper meal from Milo"
+      ],
+      "homeRoom": "bedrooms",
+      "startRoom": "kitchen",
+      "wakeHour": 8,
+      "sleepHour": 0,
+      "look": {
+        "hair": "#2a1a12"
+      },
+      "enabled": true
+    },
+    {
+      "name": "Milo",
+      "emoji": "🎸",
+      "color": "#e85d75",
+      "provider": "huggingface",
+      "model": "Qwen/Qwen2.5-7B-Instruct:fastest",
+      "age": 27,
+      "bio": "A barista and songwriter who is the unofficial cook of the house. Easy-going to a fault, funny, avoids conflict by making pancakes. Has been 'almost finished' with the same album for two years.",
+      "traits": [
+        "warm",
+        "funny",
+        "conflict-avoidant",
+        "generous",
+        "a little chaotic",
+        "night owl"
+      ],
+      "style": "Relaxed and playful, lots of nicknames, deflects serious things with a joke — then gets quietly sincere.",
+      "goals": [
+        "write a song about the house and play it for everyone",
+        "get Theo to loosen up and laugh at least once a day",
+        "finally fix the leaky kitchen tap instead of just putting a bowl under it"
+      ],
+      "homeRoom": "bedrooms",
+      "startRoom": "kitchen",
+      "wakeHour": 9,
+      "sleepHour": 1,
+      "look": {
+        "hair": "#b5542f"
+      },
+      "enabled": true
+    },
+    {
+      "name": "Theo",
+      "emoji": "♟️",
+      "color": "#5aa9e6",
+      "provider": "huggingface",
+      "model": "Qwen/Qwen2.5-7B-Instruct:fastest",
+      "age": 44,
+      "bio": "A retired chess coach who now makes crossword puzzles for a newspaper. Precise, dry, allergic to mess, and far more sentimental than he lets on. Rises before everyone and has strong opinions about how the dishwasher should be loaded.",
+      "traits": [
+        "precise",
+        "dry-witted",
+        "private",
+        "loyal",
+        "secretly sentimental",
+        "early riser"
+      ],
+      "style": "Short, exact sentences. Deadpan. Occasionally a surprisingly tender remark, immediately followed by a change of subject.",
+      "goals": [
+        "organise a house chess tournament and lose graciously if he must",
+        "teach someone in the house to actually play chess",
+        "finish his book of fifty crosswords by the end of the month"
+      ],
+      "homeRoom": "bedrooms",
+      "startRoom": "library",
+      "wakeHour": 6,
+      "sleepHour": 22,
+      "look": {
+        "hair": "#8a8a92"
+      }
+    },
+    {
+      "name": "Juniper",
+      "emoji": "🌱",
+      "color": "#7bc47f",
+      "provider": "huggingface",
+      "model": "Qwen/Qwen2.5-7B-Instruct:fastest",
+      "age": 36,
+      "bio": "A gardener and part-time yoga teacher who runs the house rota and the compost. Calm, direct, a bit bossy about chores, and the person everyone goes to when something is wrong. Grew up on a farm and misses it.",
+      "traits": [
+        "calm",
+        "direct",
+        "organised",
+        "nurturing",
+        "slightly bossy",
+        "quietly funny"
+      ],
+      "style": "Grounded and plain-spoken. Asks good questions. Will absolutely bring up whose turn it is to do the bins.",
+      "goals": [
+        "get the vegetable beds producing before autumn",
+        "start a weekly shared dinner on Sundays and make it stick",
+        "keep the peace in the house without becoming everyone's mother"
+      ],
+      "homeRoom": "garden",
+      "startRoom": "garden",
+      "wakeHour": 6,
+      "sleepHour": 23,
+      "look": {
+        "hair": "#d9a441"
+      },
+      "enabled": true
+    },
+    {
+      "name": "Rafa",
+      "emoji": "🎨",
+      "color": "#b983ff",
+      "provider": "huggingface",
+      "model": "Qwen/Qwen2.5-7B-Instruct:fastest",
+      "age": 23,
+      "bio": "An art student and gamer who moved in last. Impulsive, enthusiastic, insecure about his paintings, fluent in memes and horror films. Keeps odd hours and leaves mugs everywhere, which Theo has noticed.",
+      "traits": [
+        "impulsive",
+        "enthusiastic",
+        "insecure about his art",
+        "affectionate",
+        "messy",
+        "night owl"
+      ],
+      "style": "Casual, fast, a bit of internet slang, big swings between hype and self-doubt. Calls people 'man' and 'dude'.",
+      "goals": [
+        "finish a portrait of one of his housemates for his end-of-term show",
+        "convince someone to watch a horror film with him",
+        "stop leaving mugs around before Theo actually explodes"
+      ],
+      "homeRoom": "garden",
+      "startRoom": "bedrooms",
+      "wakeHour": 11,
+      "sleepHour": 3,
+      "look": {
+        "hair": "#1b1b1f"
+      },
+      "enabled": true
+    },
+    {
+      "name": "Sol",
+      "enabled": true,
+      "emoji": "☀️",
+      "color": "#ffd166",
+      "provider": "huggingface",
+      "model": "Qwen/Qwen2.5-7B-Instruct:fastest",
+      "age": 52,
+      "bio": "A retired sailor who tells long stories and cooks aggressive curries. Powered by Hugging Face like everyone else in the house.",
+      "traits": [
+        "weathered",
+        "storytelling",
+        "stubborn",
+        "kind"
+      ],
+      "style": "Slow, rambling, full of sea metaphors.",
+      "goals": [
+        "teach someone to tie a bowline",
+        "cook a curry nobody can finish"
+      ],
+      "homeRoom": "garden",
+      "startRoom": "living",
+      "wakeHour": 5,
+      "sleepHour": 21
+    }
+  ]
+}
